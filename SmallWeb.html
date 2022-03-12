@@ -14,16 +14,13 @@
             $("button").click(function () {
                 var username = $("#usr").val();
                 var url = "https://api.github.com/users/" + username;
-                alert(url);
+                //alert(url);
                 $.get(url, function (data, status) {
-                    alert("Name: " + data.name + "\nFollowers: " + data.followers + "\nBio: " + data.bio + "\nStatus: " + status);
+                    //alert("Name: " + data.name + "\nFollowers: " + data.followers + "\nBio: " + data.bio + "\nStatus: " + status);
                     $("#tabla").append("<tr><td>" + data.name +"</td><td>"+ data.followers +"</td><td>"+data.bio+ "</td></tr>");
-
-
                 });
             });
         });
-
 
     </script>
 </head>
